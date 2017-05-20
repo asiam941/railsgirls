@@ -2,7 +2,7 @@
 <h1>My Rails Girls Diary</h1>
 	<div>
     <%= link_to("Nowy wpis", new_entry_path) %>
-    <% for entry in @entries %>
+    <% @entries.each do |entry| %>
     <h2><%= link_to(entry.title, entry_path(entry)) %></h2>
       <p><%= entry.date %></p>
       <p><%= entry.contents %></p>

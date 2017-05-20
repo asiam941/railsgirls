@@ -2,7 +2,7 @@
 	<div>
 		<h1>My favourite websites</h1>
 		<ul>
-      <% for url, name in @websites %>
+      <% @websites.each do |url, name| %>
         <li><a href="<%= url %>"><%= name %></a></li>
       <% end %>
 		</ul>
