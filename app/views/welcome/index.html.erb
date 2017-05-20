@@ -1,2 +1,18 @@
-<h1>Hello world! :)</h1>
-<p>Strona główna</p>
+
+	<div>
+		<h1>My favourite websites</h1>
+		<ul>
+      <% for url, name in @websites %>
+        <li><a href="<%= url %>"><%= name %></a></li>
+      <% end %>
+		</ul>
+	</div>
+	<img src='http://railsgirls.com/images/rg-warsaw.png' />
+
+	<form action='/'>
+		<p><input name='title' type='text' placeholder='Title'></p>
+		<p><textarea name='title' placeholder='Content'></textarea></p>
+
+		<p><input type="submit" value="Create"></p>
+	</form>
+	<p><a href='#'>Back</a></p>
